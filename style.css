@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    /* text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); */ /* LINHA REMOVIDA PARA TIRAR O BRILHO DO NOME */
+}
+
+#countdown {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.time-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 100px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.time-box span {
+    font-size: 3rem;
+    font-weight: 900;
+    color: white; /* LINHA ALTERADA DE #ffd700 PARA white PARA TIRAR O DOURADO DOS NÚMEROS */
+    display: block;
+}
+
+.time-box p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    color: #ccc;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.pulse-text {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #ff0055;
+    text-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Animações dos Emojis Flutuantes */
+.floating-emojis {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatUp 10s linear infinite;
+    opacity: 0.7;
+}
+
+/* Posições e atrasos diferentes para cada emoji */
+.e1 { left: 10%; animation-duration: 8s; }
+.e2 { left: 25%; animation-duration: 12s; animation-delay: 2s; }
+.e3 { left: 40%; animation-duration: 9s; animation-delay: 4s; }
+.e4 { left: 55%; animation-duration: 15s; animation-delay: 1s; }
+.e5 { left: 70%; animation-duration: 10s; animation-delay: 5s; }
+.e6 { left: 85%; animation-duration: 11s; animation-delay: 3s; }
+.e7 { left: 15%; animation-duration: 13s; animation-delay: 6s; }
+.e8 { left: 80%; animation-duration: 14s; animation-delay: 2s; }
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% {
+        transform: translateY(-100px) rotate(360deg) scale(1.2);
+        opacity: 0;
+    }
+}
+/* Estilos do Novo Player de Música */
+.music-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px; /* Dá um espaço da contagem regressiva */
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 25px 10px 15px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto; /* Centraliza a caixa inteira */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.play-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.track-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: white;
+}
+
+.track-status {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
