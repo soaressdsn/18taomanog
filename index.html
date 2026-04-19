@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18tão do ManoG</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="floating-emojis">
+        <span class="emoji e1">🥷</span>
+        <span class="emoji e2">👑</span>
+        <span class="emoji e3">🎂</span>
+        <span class="emoji e4">🎉</span>
+        <span class="emoji e5">🥷</span>
+        <span class="emoji e6">🎈</span>
+        <span class="emoji e7">👑</span>
+        <span class="emoji e8">🎁</span>
+    </div>
+
+    <div class="container">
+        <h1 class="title">🥷 18tão do ManoG 👑</h1>
+        
+        <div id="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Dias</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Horas</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Minutos</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+
+<div class="music-player">
+            <button id="music-toggle" class="play-btn">▶️</button>
+            <div class="track-info">
+                <span class="track-name">CARNÍVORO - MC JACARÉ, MC LELE JP, MC NEGÃO ORIGINAL, JAPA NK</span>
+                <span id="track-status" class="track-status">Pausado</span>
+            </div>
+            <audio id="bg-music" loop>
+                <source src="audio/musica.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div id="today-message" class="hidden">
+            <h2 class="pulse-text">É HOJE!!! 🎉🍻</h2>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
